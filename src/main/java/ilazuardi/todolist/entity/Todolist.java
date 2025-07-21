@@ -2,7 +2,14 @@ package ilazuardi.todolist.entity;
 
 public class Todolist {
 
+    public Todolist() {
+    }
+
     private String todo;
+
+    public Todolist(String todo) {
+        this.todo = todo;
+    }
 
     public String getTodo() {
         return todo;
