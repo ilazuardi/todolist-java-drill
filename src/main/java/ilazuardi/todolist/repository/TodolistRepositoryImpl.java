@@ -33,7 +33,17 @@ public class TodolistRepositoryImpl implements TodolistRepository {
     }
 
     @Override
-    public void remove(Integer number) {
-
+    public void remove(int number) {
+        if (number > data.length) {
+            System.out.println("Number of Todo not found");
+        } else if (data[number - 1] == null) {
+            System.out.println("Number of Todo not found");
+        } else {
+            data[number-1] = null;
+            for (var i=number-1; i<data.length-1; i++) {
+                data[i] = data[i+1];
+            }
+            data[data.length-1] = null;
+        }
     }
 }

@@ -36,6 +36,7 @@ public class TodolistServiceImpl implements TodolistService {
 
     @Override
     public void removeTodolist(Integer number) {
-
+        todolistRepository.remove(number);
+        System.out.println("DATA BERHASIL DIHAPUS");
     }
 }
